@@ -1,0 +1,111 @@
+:root {
+    --azul: #002147;
+    --laranja: #FF6F00;
+    --branco: #ffffff;
+    --cinza: #fffbf6;
+    --cinza-escuro: #5e5e5e;
+}
+
+main {
+    padding: 40px 0px;
+    max-width: 1200px;
+    background-color: var(--cinza);
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 60px;
+}
+
+
+.representante-atual {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    background-color: var(--branco);
+    border-radius: 0;
+    padding: 80px;
+}
+
+.representante-atual h1 {
+    font-size: 36px;
+    color: var(--laranja);
+    margin-bottom: 20px;
+}
+
+.representante-atual img {
+    border-radius: 10px;
+    margin-bottom: 10px;
+    width: 40%;
+    max-width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.representante-atual p {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--cinza-escuro);
+    text-align: center;
+}
+
+
+.ex-representantes h2 {
+    font-size: 1.8rem;
+    color: var(--laranja);
+    margin-bottom: 20px;
+}
+
+.ex-rep-lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+.ex-rep-card {
+    max-width: 250px;
+    text-align: center;
+}
+
+.ex-rep-card img {
+    width: 250px;   
+    height: 250px;           
+    object-fit: cover;         
+    border-radius: 10px;
+}
+
+.ex-rep-card p {
+    margin-top: 10px;
+    font-size: 0.95rem;
+    color: var(--cinza-escuro);
+}
+
+.ex-rep-card p strong {
+    color: var(--laranja);
+    font-weight: bold;
+}
+
+
+@media (max-width: 768px) {
+    .representante-atual {
+        padding: 10px;
+    }
+
+    .representante-atual h1 {
+        font-size: 1.5rem;
+    }
+
+    .ex-representantes h2 {
+        font-size: 1.5rem;
+    }
+
+    .ex-rep-card {
+        max-width: 100%;
+    }
+
+    .representante-atual img {
+        width: 100%;
+    }
+}

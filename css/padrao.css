@@ -1,0 +1,378 @@
+:root {
+  --azul: #002147;
+  --laranja: #FF6F00;
+  --branco: #ffffff;
+  --cinza: #fffbf6;
+  --cinza-escuro: #5e5e5e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Noto Sans", sans-serif;
+  background-color: var(--cinza);
+  color: var(--azul);
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+header {
+  color: var(--branco);
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  position: relative;
+}
+
+.navegação {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0px;
+  position: relative;
+  z-index: 1000;
+}
+
+#iconedaONU {
+  height: 40px;
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.menu > ul > li {
+  position: relative;
+  display: inline-block;
+  z-index: 1002;
+}
+
+.menu a {
+  display: block;
+  padding: 12px 5px;
+  color: rgb(10, 10, 10);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu a:hover {
+  color: white;
+  background-color: var(--laranja);
+  transition: background-color 0.5s;
+  border-radius: 7.5px;
+}
+
+.menu ul ul {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 200px;
+  z-index: 2000;
+  top: 100%;
+  left: 0;
+  border: solid black 0.5px;
+}
+
+.menu ul ul li {
+  display: block;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.menu li:hover > ul {
+  display: block;
+}
+
+.menu li.open > ul {
+  display: block;
+}
+
+#Pesquisa1 {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  z-index: 1001;
+  position: relative;
+}
+
+#Pesquisa1 input {
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+main {
+  margin-top: 70px;
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 60px;
+}
+
+footer {
+  background-color: #e65c00;
+  padding: 30px;
+  font-family: "Noto Sans", sans-serif;
+  color: var(--branco);
+}
+
+.topFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.social-text p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.social-icons a {
+  margin-left: 10px;
+  color: #e65c00;
+}
+
+.social-icons img {
+  width: 20px;
+  height: 20px;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 20px 0;
+}
+
+.Footer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.Footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.Footer li {
+  margin-bottom: 8px;
+}
+
+.Footer a {
+  text-decoration: none;
+  color: var(--branco);
+  font-size: 14px;
+}
+
+.logo-footer {
+  margin-top: 30px;
+}
+
+.logo-footer img {
+  width: 140px;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  color: var(--cinza-escuro);
+  z-index: 1000;
+}
+
+@media (min-width: 1025px) {
+  .navegação {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+    padding: 15px 20px;
+  }
+
+  #iconedaONU {
+    height: 45px;
+  }
+
+  .menu {
+    justify-self: center;
+  }
+
+  #Pesquisa1 {
+    justify-self: end;
+  }
+
+  #Pesquisa1 input {
+    width: 200px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .navegação {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    position: relative;
+  }
+
+  #iconedaONU {
+    height: 45px;
+    order: 1;
+  }
+
+  #Pesquisa1 {
+    position: absolute;
+    top: 15px;
+    right: 55px;
+    width: auto;
+    order: 2;
+  }
+
+  #Pesquisa1 input {
+    width: 120px;
+    font-size: 0.9rem;
+  }
+
+  .menu-toggle {
+    display: block;
+    order: 3;
+  }
+
+  .menu {
+    position: absolute;
+    top: 60px; 
+    right: 15px;
+    width: calc(100% - 30px);
+    background-color: var(--branco);
+    border: 1px solid #ccc;
+    z-index: 9999;
+  }
+
+  .menu ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .menu ul.active {
+    display: flex;
+  }
+
+  .menu > ul > li {
+    width: 100%;
+  }
+
+  .menu ul ul {
+    background-color: #f47c2c;
+    border: none;
+    position: static;
+  }
+
+  .menu a {
+    padding: 15px;
+    color: var(--azul);
+  }
+
+  .menu li:hover > ul {
+    display: none;
+  }
+
+  .menu li.open > ul {
+    display: block;
+  }
+
+  .menu-toggle {
+    position: relative;
+    z-index: 10000;
+  }
+}
+
+@media (max-width: 800px) {
+  .navegação {
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  #iconedaONU {
+    height: 35px;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu ul ul {
+    position: static;
+    background-color: #f47c2c;
+  }
+
+  .menu li:hover > ul {
+    display: none;
+  }
+
+  .menu li.open > ul {
+    display: block;
+  }
+}
+
+@media (max-width: 600px) {
+  .Footer {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .preFooter {
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+  }
+
+  .txt-preFooter,
+  .Img-preFooter {
+    text-align: center;
+  }
+
+  .Img-preFooter img {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .logo-footer {
+    margin-top: 20px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 500px) {
+  #posNAV p {
+    font-size: 1rem;
+  }
+
+  #posNAV p strong {
+    font-size: 1.4rem;
+  }
+
+  .imagens-posNAV img {
+    width: 90%;
+  }
+
+  .programas-pagInicial img,
+  .Img-preFooter img {
+    width: 100%;
+  }
+}

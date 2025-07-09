@@ -1,0 +1,163 @@
+:root {
+    --azul: #002147;
+    --laranja: #FF6F00;
+    --branco: #ffffff;
+    --cinza: #F9F9F9;
+    --cinza-escuro: #5e5e5e;
+}
+
+main {
+    padding: 40px 0px;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: black;
+}
+
+h1 {
+    font-size: 36px;
+    color: var(--laranja);
+    margin-bottom: 20px;
+}
+
+.corpo-1 p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.corpo-1 p i {
+    color: var(--cinza-escuro);
+    display: block;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+}
+
+.corpo-2 {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    background-color: #ffffff;
+    border-radius: 0;
+    padding: 20px;
+}
+
+.parteParaDoar div {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 15px;
+    margin-bottom: 30px;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.parteParaDoar h2,
+.valor-personalizado h2 {
+    font-size: 1.5rem;
+    color: var(--azul);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.valores-pre-definidos,
+.valor-personalizado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.valores-pre-definidos button {
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    background-color: var(--laranja);
+    color: var(--branco);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.valores-pre-definidos button:hover {
+    background-color: #e66000;
+}
+
+.valor-personalizado h2 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: var(--azul);
+}
+
+.valor-personalizado input[type="number"] {
+    padding: 10px;
+    width: 100%;
+    max-width: 300px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.form-doacao {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.botao-doar {
+    background-color: var(--laranja);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.botao-doar:hover {
+    background-color: #e65c00;
+}
+
+
+.input-dinheiro {
+    display: flex;
+    align-items: center;
+    border: 2px solid var(--laranja);
+    border-radius: 8px;
+    padding: 8px 12px;
+    max-width: 220px;
+    background-color: #fff;
+}
+
+.input-dinheiro .prefixo {
+    margin-right: 8px;
+    font-weight: bold;
+    color: var(--azul);
+}
+
+.input-dinheiro input {
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    width: 100%;
+    color: var(--azul);
+}
+
+
+@media (max-width: 768px) {
+    .valores-pre-definidos {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .valores-pre-definidos button {
+        width: 100%;
+    }
+
+    .valor-personalizado input[type="number"] {
+        width: 100%;
+    }
+}

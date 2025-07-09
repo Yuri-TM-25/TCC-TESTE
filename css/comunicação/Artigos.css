@@ -1,0 +1,72 @@
+:root {
+    --azul: #002147;
+    --laranja: #FF6F00;
+    --branco: #ffffff;
+    --cinza: #fffbf6;
+    --cinza-escuro: #5e5e5e;
+}
+
+main {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: auto;
+    background-color: var(--cinza);
+}
+
+.corpo-1 h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: var(--laranja);
+}
+
+.section-flex.column {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.section-flex.column .card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.section-flex.column .card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    align-self: center;
+}
+
+.section-flex.column .card p {
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.section-flex.column .card strong {
+    color: var(--laranja);
+}
+
+.section-flex.column .card ul {
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+.section-flex.column .card ul li {
+    margin-bottom: 10px;
+}
+
+.section-flex.column .card ul li a {
+    color: var(--azul);
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.section-flex.column .card ul li a:hover {
+    color: var(--laranja);
+}

@@ -1,0 +1,155 @@
+:root {
+    --azul: #002147;
+    --laranja: #FF6F00;
+    --branco: #ffffff;
+    --cinza: #fffbf6;
+    --cinza-escuro: #5e5e5e;
+}
+
+main {
+    padding: 40px 0px;
+    max-width: 1200px;
+    background-color: var(--cinza);
+    margin: auto;
+}
+
+
+section {
+    margin-bottom: 60px;
+}
+
+
+.titulo {
+    font-size: 36px;
+    color: var(--laranja);
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.subtitulo {
+    font-size: 1.6rem;
+    color: var(--laranja);
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+
+.txtStrong-1 {
+    font-size: 1.2rem;
+    color: var(--cinza-escuro);
+}
+
+.txtStrong {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--azul);
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+.corpo-1 p, .corpo-2 p {
+    font-size: 1rem;
+    margin-bottom: 12px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.corpo-1 img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    display: block;
+    margin: 20px auto 20px;
+}
+
+.corpo-1 a {
+    color: black;
+}
+
+.img-box-principal img {
+    border-radius: 10px;
+}
+
+
+.contatos {
+    margin-top: 20px;
+}
+
+.contatos p {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #333;
+}
+
+
+.social-icons {
+    margin-top: 10px;
+    gap: 20px;
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.social-icons a:hover {
+    filter: none;
+}
+
+.social-icons img {
+    width: 100%;
+    height: auto;
+}
+
+
+.ONG,
+.contato,
+.ONU {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+    text-align: left;
+    max-width: 600px;
+    margin-right: auto;
+}
+
+.ONG li,
+.contato li,
+.ONU li {
+    margin-bottom: 8px;
+}
+
+
+@media (max-width: 768px) {
+    .titulo, .subtitulo {
+        font-size: 1.8rem;
+    }
+
+    .txtStrong-1 {
+        font-size: 1rem;
+    }
+
+    .corpo-1 img {
+        width: 100%;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    p, li {
+        font-size: 15px;
+    }
+
+    .social-icons {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+}
